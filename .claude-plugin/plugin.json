@@ -1,0 +1,8 @@
+{
+  "name": "chief-of-staff",
+  "version": "0.1.0",
+  "description": "A harness-agnostic chief-of-staff workflow for delegating software work to focused sub-agents.",
+  "author": {
+    "name": "Chief of Staff contributors"
+  }
+}

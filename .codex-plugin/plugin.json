@@ -1,0 +1,18 @@
+{
+  "name": "chief-of-staff",
+  "version": "0.1.0",
+  "description": "Chief Of Staff plugin",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Chief Of Staff",
+    "shortDescription": "Use Chief Of Staff in Codex.",
+    "longDescription": "Chief Of Staff adds a local Codex plugin scaffold.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Help me use Chief Of Staff."
+  }
+}
