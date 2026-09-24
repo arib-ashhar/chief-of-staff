@@ -11,6 +11,57 @@ The chief of staff decomposes a request, delegates bounded work to planner, code
 
 The shared workflow lives in `core/` and is deliberately independent of vendor-specific tool names or commands.
 
+## Install from the GitHub marketplace
+
+The repository includes a marketplace catalog at `.agents/plugins/marketplace.json`.
+
+Add the GitHub marketplace to Codex:
+
+```bash
+codex plugin marketplace add arib-ashhar/chief-of-staff --ref main
+```
+
+Install the plugin:
+
+```bash
+codex plugin add chief-of-staff@chief-of-staff
+```
+
+If the marketplace name differs on your machine, check it with:
+
+```bash
+codex plugin marketplace list
+codex plugin list
+```
+
+Start a new Codex session after installation, then invoke the plugin with:
+
+```text
+@chief-of-staff
+```
+
+Or invoke it together with a task:
+
+```text
+@chief-of-staff
+
+Implement this task:
+<describe the work>
+```
+
+The GitHub repository must be public, or the user must have Git access to it.
+
+### Update an installed development version
+
+After pushing changes to `main`, refresh the marketplace and reinstall the plugin:
+
+```bash
+codex plugin marketplace upgrade chief-of-staff
+codex plugin add chief-of-staff@chief-of-staff
+```
+
+Start a new Codex session after updating so the new skill files are loaded.
+
 ## Usage
 
 Invoke the plugin explicitly, then provide the task:
