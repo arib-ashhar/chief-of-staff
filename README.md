@@ -15,26 +15,28 @@ The shared workflow lives in `core/` and is deliberately independent of vendor-s
 
 The repository includes a marketplace catalog at `.agents/plugins/marketplace.json`.
 
-Add the GitHub marketplace to Codex:
+### Codex
 
 ```bash
 codex plugin marketplace add arib-ashhar/chief-of-staff --ref main
+codex plugin add chief-of-staff@chief-of-staff
 ```
 
-Install the plugin:
+### Claude Code
 
 ```bash
-codex plugin add chief-of-staff@chief-of-staff
+claude plugin marketplace add https://github.com/arib-ashhar/chief-of-staff/main/.agents/plugins/marketplace.json
+claude plugin install chief-of-staff@chief-of-staff
 ```
 
 If the marketplace name differs on your machine, check it with:
 
 ```bash
-codex plugin marketplace list
-codex plugin list
+claude plugin marketplace list
+claude plugin list
 ```
 
-Start a new Codex session after installation, then invoke the plugin with:
+Start a new Claude Code session after installation, then invoke the plugin with:
 
 ```text
 @chief-of-staff
@@ -51,16 +53,21 @@ Implement this task:
 
 The GitHub repository must be public, or the user must have Git access to it.
 
-### Update an installed development version
+### Update an installed version
 
-After pushing changes to `main`, refresh the marketplace and reinstall the plugin:
+After pushing changes to `main`, refresh the marketplace and update the plugin:
 
 ```bash
+# Codex
 codex plugin marketplace upgrade chief-of-staff
 codex plugin add chief-of-staff@chief-of-staff
+
+# Claude Code
+claude plugin marketplace update chief-of-staff
+claude plugin update chief-of-staff
 ```
 
-Start a new Codex session after updating so the new skill files are loaded.
+Start a new session after updating so the new skill files are loaded.
 
 ## Usage
 

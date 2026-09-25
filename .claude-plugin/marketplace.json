@@ -1,0 +1,23 @@
+{
+  "name": "chief-of-staff",
+  "owner": {
+    "name": "arib-ashhar"
+  },
+  "interface": {
+    "displayName": "Chief of Staff"
+  },
+  "metadata": {
+    "description": "A harness-agnostic chief-of-staff workflow for delegating software work to focused sub-agents."
+  },
+  "plugins": [
+    {
+      "name": "chief-of-staff",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/arib-ashhar/chief-of-staff.git",
+        "ref": "main"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
