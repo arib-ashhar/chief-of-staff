@@ -1,0 +1,41 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/chief-of-staff-activate.js\"",
+            "timeout": 5,
+            "statusMessage": "Loading chief-of-staff workflow..."
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/chief-of-staff-subagent.js\"",
+            "timeout": 5,
+            "statusMessage": "Injecting role contract..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/chief-of-staff-tracker.js\"",
+            "timeout": 5,
+            "statusMessage": "Tracking delegation..."
+          }
+        ]
+      }
+    ]
+  }
+}

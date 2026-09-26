@@ -6,6 +6,7 @@
     "name": "Local developer"
   },
   "skills": "./skills/",
+  "hooks": "../hooks/hooks.json",
   "interface": {
     "displayName": "Chief Of Staff",
     "shortDescription": "Use Chief Of Staff in Codex.",

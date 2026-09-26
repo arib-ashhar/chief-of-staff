@@ -1,0 +1,14 @@
+{
+  "name": "chief-of-staff-hooks",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node test-runner.js",
+    "test:unit": "node test-role-detection.js",
+    "test:integration": "node test-injection-integration.js",
+    "test:watch": "nodemon --exec 'npm test' --watch . --ext js,json,md"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

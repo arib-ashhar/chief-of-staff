@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/chief-subagent-inject.js\"",
+            "timeout": 5,
+            "statusMessage": "Loading chief-of-staff contracts..."
+          }
+        ]
+      }
+    ]
+  }
+}
